@@ -16,6 +16,8 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 add_executable(hello_test tests/hello_test.cpp src/hello.cpp)
-add_executable(main main.cpp src/hello.cpp)
+add_executable(main main.cpp src/hello.cpp
+        src/dish.hpp
+        src/dishstack.h)
 
 target_link_libraries(hello_test PRIVATE Catch2::Catch2WithMain)
